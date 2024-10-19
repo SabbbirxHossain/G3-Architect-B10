@@ -2,6 +2,9 @@
 
 *{
   font-family: "Work Sans", sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 
 }
 
@@ -108,6 +111,58 @@ main{
   gap: 24px;
 }
 
+
+/* women feature section */
+
+.women-features{
+  gap: 80px;
+}
+
+.m{
+  margin: 50px 0;
+}
+
+#Experiences-badge{
+  padding: 45px 42px;
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-left: -100px;
+  margin-top: -100px;
+}
+
+#Experiences-year{
+  font-size: 4rem;
+  font-weight: 700;
+}
+
+.feature-architect img{
+  width: 100%;
+}
+
+.feature-content{
+  margin-bottom: 30px;
+}
+
+#feature-title-border{
+  border-left: 5px solid orange;
+  padding-left: 20px;
+}
+
+.feature-card{
+  padding: 30px;
+  box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.06);
+  margin-bottom: 20px;
+  border-radius: 10px;
+
+}
+
+.feature-card .feature-card-title{
+  font-weight: 600;
+  font-size: 1.25rem;
+ margin-top: 0px;
+ margin-bottom: 0px;
+}
+
 .features{
   max-width: 530px;
   margin-left: 120px;
@@ -124,30 +179,6 @@ main{
 
 .features1-des{
   max-width: 552px;
-}
-
-
-
-
-
-/* Responsive Layout styles  */
-
-@media screen and (max-width:576px) {
-  .navbar,.nav-links,.team{
-    flex-direction: column;
-  }
-
-  /* .banner-img{
-    max-width: 100%;
-  } */
-
-  .team-img-container{
-    grid-template-columns: repeat(1,1fr);
-  }
-  .features{
-    max-width: 400px;
-    margin-left: 10px;
-  }
 }
 
 .facts-container{
@@ -176,11 +207,80 @@ main{
   margin-bottom: 10px;
 }
 
+.section-center{
+  max-width: 540px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.sponsor-info{
+  max-width: 540px;
+  margin: 50px auto; 
+  text-align: center;
+}
+
+.soposor-companies{
+  display: grid;
+  grid-template-columns: repeat(5,1fr);
+  gap: 40px;
+}
+
+.soposor-companies img{
+  filter: grayscale(100%);
+}
+
+
+
+/* Responsive Layout styles  */
+
+@media screen and (max-width:576px) {
+  .navbar,.nav-links,
+  .team,
+  .women-features{
+    flex-direction: column;
+  }
+
+  /* .banner-img{
+    max-width: 100%;
+  } */
+
+  .team-img-container,
+  .facts-container,
+  .soposor-companies
+  {
+    grid-template-columns: 1fr;
+  }
+
+  #Experiences-badge{
+    margin-top: 20px;
+    margin-left: 20px;
+  }
+
+
+
+  .facts-container,
+  .soposor-companies{
+    justify-items: center;
+    gap: 24px;
+  }
+  .features{
+    max-width: 400px;
+    margin-left: 10px;
+  }
+}
+
 
 /* medium size devies  */
 
 @media screen and (min-width:577px) and (max-width:992px) {
   .team{
     flex-direction: column;
+  }
+
+  .facts-container,
+  .soposor-companies{
+    grid-template-columns: repeat(2,1fr);
+    justify-items: center;
+    gap: 30px;
   }
 }
